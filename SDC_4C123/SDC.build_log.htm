@@ -1,0 +1,81 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Dropbox\ArmBook\LaunchPad\ValvanoWareTM4C123\SDC_4C123\SDC.uvproj
+Project File Date:  05/12/2015
+
+<h2>Output:</h2>
+Build target 'SDC'
+compiling eDisk.c...
+linking...
+Program Size: Code=3536 RO-data=32 RW-data=8 ZI-data=1632  
+".\SDC.axf" - 0 Error(s), 0 Warning(s).
+Clean started: Project: 'SDC'
+   deleting intermediate output files for target 'SDC'
+Clean started: Project: 'SDC'
+   deleting intermediate output files for target 'SDC'
+</pre>
+</body>
+</html>
+efined
+    delay = SYSCTL_RCGCGPIO_R;
+eDisk.c(68): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTD_LOCK_R = 0x4C4F434B;   // 2) unlock PortD PD7  
+eDisk.c(69): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTD_CR_R |= 0xFF;          // allow changes to PD7-0       
+eDisk.c(70): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTD_PUR_R |= 0x80;         // enable weak pullup on PD7
+eDisk.c(71): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTD_DIR_R |= 0x80;         // make PD7 output 
+eDisk.c(72): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTD_DR4R_R |= 0x80;        // 4mA output on outputs
+eDisk.c(74): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTD_PCTL_R &= ~0xF0000000;
+eDisk.c(75): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTD_AMSEL_R &= ~0x80; // disable analog functionality on PD7
+eDisk.c(76): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTD_DEN_R |= 0x80;    // enable digital I/O on PD7
+eDisk.c(107): error:  #20: identifier "uint32_t" is undefined
+    SYSCTL_RCGCGPIO_R |= 0x01;   // activate port A
+eDisk.c(108): error:  #20: identifier "uint32_t" is undefined
+    SYSCTL_RCGCSSI_R |= 0x01;    // activate SSI0
+eDisk.c(111): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTA_AFSEL_R |= 0x3C;           // enable alt funct on PA2,4,5
+eDisk.c(112): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTA_PUR_R |= 0x3C;             // enable weak pullup on PA2,3,4,5
+eDisk.c(113): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTA_DEN_R |= 0x3C;             // enable digital I/O on PA2,3,4,5
+eDisk.c(115): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTA_DIR_R |= 0xC8;             // PA7,PA6,PA3 output (CS to LCD)
+eDisk.c(116): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTA_DATA_R |= 0x88;            // PA7,PA3 high (disable LCD)
+eDisk.c(118): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTA_DR4R_R |= 0xEC;            // 4mA output on outputs
+eDisk.c(119): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTA_PCTL_R = (GPIO_PORTA_PCTL_R&0xFF0000FF)+0x00222200;
+eDisk.c(119): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTA_PCTL_R = (GPIO_PORTA_PCTL_R&0xFF0000FF)+0x00222200;
+eDisk.c(120): error:  #20: identifier "uint32_t" is undefined
+    GPIO_PORTA_AMSEL_R = 0;               // disable analog functionality on PA
+eDisk.c(121): error:  #20: identifier "uint32_t" is undefined
+    SSI0_CR1_R &= ~SSI_CR1_SSE;           // disable SSI
+eDisk.c(122): error:  #20: identifier "uint32_t" is undefined
+    SSI0_CR1_R &= ~SSI_CR1_MS;            // master mode
+eDisk.c(124): error:  #20: identifier "uint32_t" is undefined
+    SSI0_CPSR_R = (SSI0_CPSR_R&~SSI_CPSR_CPSDVSR_M)+CPSDVSR; 
+eDisk.c(124): error:  #20: identifier "uint32_t" is undefined
+    SSI0_CPSR_R = (SSI0_CPSR_R&~SSI_CPSR_CPSDVSR_M)+CPSDVSR; 
+eDisk.c(127): error:  #20: identifier "uint32_t" is undefined
+    SSI0_CR0_R &= ~(SSI_CR0_SCR_M |       // SCR = 0 (80 Mbps base clock)
+eDisk.c(131): error:  #20: identifier "uint32_t" is undefined
+    SSI0_CR0_R = (SSI0_CR0_R&~SSI_CR0_FRF_M)+SSI_CR0_FRF_MOTO;
+eDisk.c(131): error:  #20: identifier "uint32_t" is undefined
+    SSI0_CR0_R = (SSI0_CR0_R&~SSI_CR0_FRF_M)+SSI_CR0_FRF_MOTO;
+eDisk.c(133): error:  #20: identifier "uint32_t" is undefined
+    SSI0_CR0_R = (SSI0_CR0_R&~SSI_CR0_DSS_M)+SSI_CR0_DSS_8;
+eDisk.c: 0 warnings, 30 errors
+compiling PLL.c...
+".\SDC.axf" - 30 Error(s), 0 Warning(s).
+Target not created

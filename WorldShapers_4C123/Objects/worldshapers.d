@@ -1,0 +1,10 @@
+.\objects\worldshapers.o: WorldShapers.c
+.\objects\worldshapers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\worldshapers.o: ../inc/BSP.h
+.\objects\worldshapers.o: ../inc/CortexM.h
+.\objects\worldshapers.o: Random.h
+.\objects\worldshapers.o: Sound.h
+.\objects\worldshapers.o: score.h
+.\objects\worldshapers.o: images.h
+.\objects\worldshapers.o: os.h
+.\objects\worldshapers.o: TExaS.h
